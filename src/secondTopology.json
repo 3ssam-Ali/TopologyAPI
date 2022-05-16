@@ -1,0 +1,22 @@
+{
+  "id": "top2",
+  "components": [
+    {
+      "type": "Repeater",
+      "id": "rep1",
+      "netlist": {
+        "t1": "vdd",
+        "t2": "n1"
+      }
+    },
+    {
+      "type": "Comparator",
+      "id": "c1",
+      "netlist": {
+        "drain": "n1",
+        "gate": "vin",
+        "source": "vss"
+      }
+    }
+  ]
+}
