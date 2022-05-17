@@ -10,6 +10,10 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Class Contains Static Methods to Manage and Query Topologies.
+ * @author Essam
+ */
 public class TopologyController {
     public static HashMap<String,Topology> loadedTopologies = new HashMap<>();
 
@@ -34,7 +38,7 @@ public class TopologyController {
     }
 
     /**
-     * Writes a loaded topology into the disk as a JSON file
+     * Write a loaded topology into the disk as a JSON file
      * @param topologyID : the id for the topology to write
      */
     public static void writeTopology(String topologyID) {
@@ -79,8 +83,8 @@ public class TopologyController {
 
     /**
      * Return the net-list of a specific component
-     * @param topologyID :
-     * @param componentID :
+     * @param topologyID : the id for the topology
+     * @param componentID : the id for the specific component
      */
     public static HashMap<String, String> getConnections(String topologyID,String componentID){
         Topology topology = loadedTopologies.get(topologyID);
